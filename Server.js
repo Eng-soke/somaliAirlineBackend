@@ -5,8 +5,11 @@ const app = express();
 
 // Handle CORS before other middleware
 app.use(cors({
-  origin: "http://localhost:5173",
-  credentials: true,
+  origin: [
+    "http://localhost:5173",
+    "https://somaliairline.vercel.app"
+  ],
+  credentials: true
 }));
 
 app.use(express.json());
