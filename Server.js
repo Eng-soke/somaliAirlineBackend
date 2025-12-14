@@ -36,6 +36,9 @@ app.use(reportRouter)
 
 const bookingSchema = require("./model/flight");
 
+app.get('/', (req,res)=>{
+  res.send("Welcome to the API")
+})
 
 app.get("/bookings/totalPrice", async (req, res) => {
   try {
